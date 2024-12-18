@@ -11,5 +11,8 @@
     "@vercel/node": {
       "path-to-regexp": "8.2.0"
     }
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
   }
 }

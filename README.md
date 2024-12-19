@@ -23,3 +23,8 @@ Then run the app at the root of the repository:
 ```bash
 vercel dev
 ```
+
+## Notes
+
+Just for documentation purposes: 
+- [`@vercel/node`](https://github.com/vercel/vercel/tree/main/packages/node) is relying on outdated version of [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp). There is an [open issue](https://github.com/vercel/vercel/issues/11543) on this, but it may not be that straightforward to get a fix in anytime soon. Nonetheless, I was able to resolve the vulnerability by overriding it in my `package.json`.

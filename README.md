@@ -1,10 +1,10 @@
 # S for Serverless
 
-Simple serverless function that handles requests for frontend app hosted at https://joey-ma.github.io/.
+Simple serverless function, acting as a middleware, in a microservices architecture, that handles requests for frontend app hosted at https://joey-ma.github.io/.
 
 ## How to Use
 
-Steps will be taken to secure this app, but feel free to use this as a starting point for your application. This app references the example app [`node-hello-world`](https://github.com/vercel/examples/tree/main/solutions/node-hello-world).
+Additional steps will be taken to secure this app, but feel free to use this as a starting point for your application. This app references the example app [`node-hello-world`](https://github.com/vercel/examples/tree/main/solutions/node-hello-world).
 
 ### Clone and Deploy
 

@@ -1,4 +1,7 @@
 {
+  "name": "s-for-serverless",
+  "version": "0.0.1",
+  "description": "A simple serverless function that handles requests from a frontend app.",
   "repository": "https://github.com/joey-ma/s-for-serverless.git",
   "license": "MIT",
   "private": true,

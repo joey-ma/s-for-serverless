@@ -1,27 +1,38 @@
 # S for Serverless
 
-Simple serverless function, acting as a middleware, in a microservices architecture, that handles requests for frontend app hosted at https://joey-ma.github.io/.
+Acting as a middleware in a microservices architecture, here is a simple serverless function that handles requests from a frontend app.
 
 ## How to Use
 
 Additional steps will be taken to secure this app, but feel free to use this as a starting point for your application. This app references the example app [`node-hello-world`](https://github.com/vercel/examples/tree/main/solutions/node-hello-world).
 
-### Clone and Deploy
+### Getting Started
 
 ```bash
 git clone https://github.com/joey-ma/s-for-serverless.git
+cd s-for-serverless
 ```
 
-Install the Vercel CLI:
+### Deploying Projects from Vercel CLI
+
+First, you can install Vercel CLI globally
 
 ```bash
 npm i -g vercel
 ```
 
-Then run the app at the root of the repository:
+To test your Vercel Project locally before deploying, run the app at the root of the repository:
 
 ```bash
 vercel dev
+```
+
+```bash
+vercel build
+```
+
+```bash
+vercel # you can omit 'deploy' in `vercel deploy`
 ```
 
 ## Notes

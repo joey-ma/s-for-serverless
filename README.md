@@ -59,3 +59,7 @@ git push origin --tags # explicitly push tags to a shared server after you have 
 # If supplied with -m or --message config option, npm will use it as a commit message when creating a version commit. If the message config contains %s then that will be replaced with the resulting version number. For example:
 npm version patch -m "If run in a git repo, upgrading using npm version patch also create a version commit and tag (\%s: %s)"
 ```
+
+### Automating Tags and Releases
+
+Implementing [`release-please`](https://github.com/googleapis/release-please)/[release-please-action`](https://github.com/googleapis/release-please-action) allows releases to be automated with [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).

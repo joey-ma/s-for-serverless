@@ -5,11 +5,6 @@
   "repository": "https://github.com/joey-ma/s-for-serverless.git",
   "license": "MIT",
   "private": true,
-  "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build",
-    "deploy": "vercel"
-  },
   "devDependencies": {
     "@types/node": "^22.10.2",
     "@vercel/node": "^5.0.0",

@@ -39,3 +39,23 @@ vercel # you can omit 'deploy' in `vercel deploy`
 
 Just for documentation purposes: 
 - [`@vercel/node`](https://github.com/vercel/vercel/tree/main/packages/node) is relying on outdated version of [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp). There is an [open issue](https://github.com/vercel/vercel/issues/11543) on this, but it may not be that straightforward to get a fix in anytime soon. Nonetheless, I was able to resolve the vulnerability by overriding it in my `package.json`.
+
+## Semantic Versioning
+
+> Git has the ability to [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).
+
+```bash
+git tag # lists the existing tags.
+git tag -a v0.0.3 -m 'add a message as you create an annotated tag'
+git show v0.0.2 # shows the commit
+git tag -a v0.0.0 d19d8f0ca59f85af3808435ea35c7a8fd2c98bea # tag the project after the fact if you forgot
+# By default, the git push command doesn’t transfer tags to remote servers. 
+git push origin --tags # explicitly push tags to a shared server after you have created them
+```
+
+[`npm version`](https://docs.npmjs.com/cli/v8/commands/npm-version) 
+
+```bash
+# If supplied with -m or --message config option, npm will use it as a commit message when creating a version commit. If the message config contains %s then that will be replaced with the resulting version number. For example:
+npm version patch -m "If run in a git repo, upgrading using npm version patch also create a version commit and tag (\%s: %s)"
+```

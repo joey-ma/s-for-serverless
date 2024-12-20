@@ -1,5 +1,7 @@
 # S for Serverless
 
+## Overview
+
 Acting as a middleware in a microservices architecture, here is a simple serverless function that handles requests from a frontend app.
 
 ## How to Use
@@ -8,12 +10,14 @@ Additional steps will be taken to secure this app, but feel free to use this as 
 
 ### Getting Started
 
+Clone and change directory to project root.
+
 ```bash
 git clone https://github.com/joey-ma/s-for-serverless.git
 cd s-for-serverless
 ```
 
-### Deploying Projects from Vercel CLI
+### Using Vercel CLI
 
 First, you can install Vercel CLI globally
 
@@ -62,4 +66,6 @@ npm version patch -m "If run in a git repo, upgrading using npm version patch al
 
 ### Automating Tags and Releases
 
-Implementing [`release-please`](https://github.com/googleapis/release-please)/[release-please-action`](https://github.com/googleapis/release-please-action) allows releases to be automated with [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).
+`standard-version` is deprecated and [bcoe](https://github.com/bcoe), one of the maintainers, recommends [`release-please`](https://github.com/googleapis/release-please). Otherwise [`semantic-release`](https://www.npmjs.com/package/@semantic-release/github) also seems like a good alternative option.
+
+This repo uses [`release-please-action`](https://github.com/googleapis/release-please-action) to automate releases with [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).

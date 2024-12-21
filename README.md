@@ -48,7 +48,7 @@ Just for documentation purposes:
 
 > Git has the ability to tag specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).
 
-[git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+[`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
 ```bash
 git tag # lists the existing tags.
@@ -70,4 +70,4 @@ npm version patch -m "If run in a git repo, upgrading using npm version patch al
 
 [`standard-version`](https://www.npmjs.com/package/standard-version) is deprecated and [bcoe](https://github.com/bcoe), one of the maintainers, recommends [`release-please`](https://github.com/googleapis/release-please). Otherwise [`semantic-release`](https://www.npmjs.com/package/@semantic-release/github) also seems like a good alternative option.
 
-This repo uses [`release-please-action`](https://github.com/googleapis/release-please-action) to automate releases with [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).
+This project uses [`release-please-action`](https://github.com/googleapis/release-please-action) to automate releases with [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).

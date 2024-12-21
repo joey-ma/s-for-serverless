@@ -2,7 +2,7 @@
 
 ## Overview
 
-Acting as a middleware in a microservices architecture, here is a simple serverless function that handles requests from a frontend app.
+Acting as a middleware in a microservices architecture, `s-for-serverless` is a simple serverless function that handles requests from a frontend app.
 
 ## How to Use
 
@@ -44,9 +44,11 @@ vercel # you can omit 'deploy' in `vercel deploy`
 Just for documentation purposes: 
 - [`@vercel/node`](https://github.com/vercel/vercel/tree/main/packages/node) is relying on outdated version of [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp). There is an [open issue](https://github.com/vercel/vercel/issues/11543) on this, but it may not be that straightforward to get a fix in anytime soon. Nonetheless, I was able to resolve the vulnerability by overriding it in my `package.json`.
 
-## Semantic Versioning
+### Semantic Versioning
 
-> Git has the ability to [tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).
+> Git has the ability to tag specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).
+
+[git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 
 ```bash
 git tag # lists the existing tags.
@@ -66,6 +68,6 @@ npm version patch -m "If run in a git repo, upgrading using npm version patch al
 
 ### Automating Tags and Releases
 
-`standard-version` is deprecated and [bcoe](https://github.com/bcoe), one of the maintainers, recommends [`release-please`](https://github.com/googleapis/release-please). Otherwise [`semantic-release`](https://www.npmjs.com/package/@semantic-release/github) also seems like a good alternative option.
+[`standard-version`](https://www.npmjs.com/package/standard-version) is deprecated and [bcoe](https://github.com/bcoe), one of the maintainers, recommends [`release-please`](https://github.com/googleapis/release-please). Otherwise [`semantic-release`](https://www.npmjs.com/package/@semantic-release/github) also seems like a good alternative option.
 
 This repo uses [`release-please-action`](https://github.com/googleapis/release-please-action) to automate releases with [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).

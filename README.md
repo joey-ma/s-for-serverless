@@ -4,6 +4,8 @@
 
 Acting as a middleware in a microservices architecture, `s-for-serverless` is a simple serverless function that handles requests from a frontend app.
 
+![image](https://github.com/user-attachments/assets/02586ca0-bf76-425e-ae63-5b49924f6224)
+
 ## How to Use
 
 Additional steps will be taken to secure this app, but feel free to use this as a starting point for your application. This app references the example app [`node-hello-world`](https://github.com/vercel/examples/tree/main/solutions/node-hello-world).

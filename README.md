@@ -8,7 +8,7 @@ Acting as a middleware in a microservices architecture, `s-for-serverless` is a 
 
 ## How to Use
 
-Additional steps will be taken to secure this app, but feel free to use this as a starting point for your application. This app references the example app [`node-hello-world`](https://github.com/vercel/examples/tree/main/solutions/node-hello-world).
+Feel free to use this as a starting point for your application as I take additional steps to secure this app. This app references the example app [`node-hello-world`](https://github.com/vercel/examples/tree/main/solutions/node-hello-world).
 
 ### Getting Started
 
@@ -21,7 +21,7 @@ cd s-for-serverless
 
 ### Using Vercel CLI
 
-First, you can install Vercel CLI globally
+First, you can install Vercel CLI globally. Log in as needed following command line prompts.
 
 ```bash
 npm i -g vercel
@@ -33,6 +33,8 @@ To test your Vercel Project locally before deploying, run the app at the root of
 vercel dev
 ```
 
+To build & deploy your app with vercel:
+
 ```bash
 vercel build
 ```
@@ -43,8 +45,22 @@ vercel # you can omit 'deploy' in `vercel deploy`
 
 ## Notes
 
-Just for documentation purposes: 
-- [`@vercel/node`](https://github.com/vercel/vercel/tree/main/packages/node) is relying on outdated version of [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp). There is an [open issue](https://github.com/vercel/vercel/issues/11543) on this, but it may not be that straightforward to get a fix in anytime soon. Nonetheless, I was able to resolve the vulnerability by overriding it in my `package.json`.
+### Addressing Vulnerabilities: 
+
+As of December 21, 2024, [`@vercel/node`](https://github.com/vercel/vercel/tree/main/packages/node) depends on an outdated version of [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp). 
+
+
+While there is an [open issue](https://github.com/vercel/vercel/issues/11543) related to this, a resolution may take some time. In the meantime, I resolved the vulnerability by adding an override in my `package.json`.
+
+```json
+  "overrides": {
+    "@vercel/node": {
+      "path-to-regexp": "8.2.0"
+    }
+  },
+```
+
+This ensures the project uses the updated version of path-to-regexp without waiting for an official fix.
 
 ### Semantic Versioning
 
@@ -70,6 +86,6 @@ npm version patch -m "If run in a git repo, upgrading using npm version patch al
 
 ### Automating Tags and Releases
 
-[`standard-version`](https://www.npmjs.com/package/standard-version) is deprecated and [bcoe](https://github.com/bcoe), one of the maintainers, recommends [`release-please`](https://github.com/googleapis/release-please). Otherwise [`semantic-release`](https://www.npmjs.com/package/@semantic-release/github) also seems like a good alternative option.
+With the deprecation of [`standard-version`](https://www.npmjs.com/package/standard-version), [bcoe](https://github.com/bcoe) (one of its maintainers) recommends switching to [`release-please`](https://github.com/googleapis/release-please). Alternatively, [`semantic-release`](https://www.npmjs.com/package/@semantic-release/github) is another strong option for automating releases.
 
-This project uses [`release-please-action`](https://github.com/googleapis/release-please-action) to automate releases with [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).
+For this project, we’ve adopted the [`release-please-action`](https://github.com/googleapis/release-please-action) to streamline releases based on [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).

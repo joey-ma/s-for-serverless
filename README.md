@@ -21,11 +21,19 @@ cd s-for-serverless
 
 ### Using Vercel CLI
 
-First, you can install Vercel CLI globally. Log in as needed following command line prompts.
+First, you can install Vercel CLI globally. (I'm ignoring the warning messages for now... 🫠)
 
 ```bash
 npm i -g vercel
 ```
+
+Log in as needed, following command line prompts.
+
+```bash
+vercel login
+```
+
+<img width="277" alt="image" src="https://github.com/user-attachments/assets/a8eee46e-dd07-4ed8-8f40-ab6b72bd3972" />
 
 To test your Vercel Project locally before deploying, run the app at the root of the repository:
 
@@ -47,10 +55,11 @@ vercel # you can omit 'deploy' in `vercel deploy`
 
 ### Addressing Vulnerabilities: 
 
-As of December 21, 2024, [`@vercel/node`](https://github.com/vercel/vercel/tree/main/packages/node) depends on an outdated version of [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp). 
+As of December 21, 2024, [`@vercel/node`](https://github.com/vercel/vercel/tree/main/packages/node) depends on an outdated version of [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp), which introduces a [vulnerability](https://github.com/advisories/GHSA-9wv6-86v2-598j).
 
+<img width="762" alt="image" src="https://github.com/user-attachments/assets/83311b92-4c3e-421a-88b3-2e7699ec3281" />
 
-While there is an [open issue](https://github.com/vercel/vercel/issues/11543) related to this, a resolution may take some time. In the meantime, I resolved the vulnerability by adding an override in my `package.json`.
+While there is an [open issue](https://github.com/vercel/vercel/issues/11543) related to this, a resolution may take some time. In the meantime, I resolved the vulnerability by adding an override in my `package.json`. (`npm audit fix` didn't work for me.)
 
 ```json
   "overrides": {
@@ -61,6 +70,8 @@ While there is an [open issue](https://github.com/vercel/vercel/issues/11543) re
 ```
 
 This ensures the project uses the updated version of path-to-regexp without waiting for an official fix.
+
+<img width="376" alt="image" src="https://github.com/user-attachments/assets/0bd4a8fa-ad60-4dea-9f69-c96b654cd3a9" />
 
 ### Semantic Versioning
 

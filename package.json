@@ -5,9 +5,13 @@
   "repository": "https://github.com/joey-ma/s-for-serverless.git",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "@types/node": "^22.10.2",
     "@vercel/node": "^5.0.0",
+    "jest": "^29.7.0",
     "typescript": "^5.7.2"
   },
   "overrides": {

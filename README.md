@@ -21,11 +21,15 @@ cd s-for-serverless
 
 ### Using Vercel CLI
 
-First, you can install Vercel CLI globally. (I'm ignoring the warning messages for now... 🫠)
+First, you can install Vercel CLI globally.
 
 ```bash
 npm i -g vercel
 ```
+
+I'm ignoring the warning messages for now... 🫠
+
+<img width="1213" alt="image" src="https://github.com/user-attachments/assets/d9a6a8e2-77be-4540-9d0d-81ca6eb1502a" />
 
 Log in as needed, following command line prompts.
 

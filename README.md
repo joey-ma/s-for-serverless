@@ -55,7 +55,7 @@ vercel build
 vercel # you can omit 'deploy' in `vercel deploy`
 ```
 
-Run tests using [Jest](https://jestjs.io/) with TypeScript for this app by using the scripts below:
+Run tests using [Jest](https://jestjs.io/) and [`node-mocks-http`](https://www.npmjs.com/package/node-mocks-http)with TypeScript for this app by using the scripts below:
 
 ```bash
 npm test # npx jest

@@ -109,4 +109,40 @@ npm version patch -m "If run in a git repo, upgrading using npm version patch al
 
 With the deprecation of [`standard-version`](https://www.npmjs.com/package/standard-version), [bcoe](https://github.com/bcoe) (one of its maintainers) recommends switching to [`release-please`](https://github.com/googleapis/release-please). Alternatively, [`semantic-release`](https://www.npmjs.com/package/@semantic-release/github) is another strong option for automating releases.
 
-For this project, we’ve adopted the [`release-please-action`](https://github.com/googleapis/release-please-action) to streamline releases based on [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/).
+For this project, we’ve adopted the [`release-please-action`](https://github.com/googleapis/release-please-action) to streamline releases based on [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/). 
+
+#### Commit Message Guidelines
+
+Here's an example of precise [Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
+
+#### Types
+
+* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+* **docs**: Documentation only changes
+* **feat**: A new feature
+* **fix**: A bug fix
+* **perf**: A code change that improves performance
+* **refactor**: A code change that neither fixes a bug nor adds a feature
+* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* **test**: Adding missing tests or correcting existing tests
+
+#### Scopes
+
+* **animations**
+* **common**
+* **compiler**
+* **compiler-cli**
+* **core**
+* **elements**
+* **forms**
+* **http**
+* **language-service**
+* **platform-browser**
+* **platform-browser-dynamic**
+* **platform-server**
+* **platform-webworker**
+* **platform-webworker-dynamic**
+* **router**
+* **service-worker**
+* **upgrade**

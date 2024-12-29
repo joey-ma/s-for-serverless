@@ -55,6 +55,12 @@ vercel build
 vercel # you can omit 'deploy' in `vercel deploy`
 ```
 
+Run tests using [`jest`](https://jestjs.io/) with TypeScript for this app by using the scripts below:
+
+```bash
+npm test # npx jest
+```
+
 ## Notes
 
 ### Addressing Vulnerabilities: 

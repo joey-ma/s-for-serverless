@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/joey-ma/s-for-serverless/compare/v0.3.0...v0.4.0) (2025-01-04)
+
+
+### Features
+
+* **main:** using vercel rewrites as a reverse proxy ([7c3af04](https://github.com/joey-ma/s-for-serverless/commit/7c3af04ac09478514172d99eb82b7d09ff0ea8b4))
+
 ## [0.3.0](https://github.com/joey-ma/s-for-serverless/compare/v0.2.0...v0.3.0) (2024-12-25)
 
 
